@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectCounter } from '../redux/selectors';
-import { increment, decrement, reset, add } from '../redux/actions';
+import { increment, decrement, reset, add, minus } from '../redux/actions';
 
 /**
  * Counter Component
@@ -41,6 +41,13 @@ export default function Counter({ onDispatch }) {
     setAddAmount(0);
   }
 
+  function minusHandler(){
+    if (!addAmount.trim()) return;
+    console.log(addAmount);
+    dispatch(minus(addAmount));
+    setAddAmount(0);
+  }
+
   return (
     <div className="card">
       <div className="card-title">Counter component</div>
@@ -62,6 +69,9 @@ export default function Counter({ onDispatch }) {
 
         <button className="btn btn-lg" onClick={addHandler}>
           Add
+        </button>
+        <button className="btn btn-lg" onClick={minusHandler}>
+          Minus
         </button>
       </div>
 

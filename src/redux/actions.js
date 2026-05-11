@@ -6,7 +6,8 @@ import {
   TOGGLE_TODO,
   REMOVE_TODO,
   UPDATE_TODO,
-  ADD
+  ADD,
+  MINUS
 } from './actionTypes';
 
 /**
@@ -30,6 +31,7 @@ import {
 export const increment = () => ({ type: INCREMENT });
 export const decrement = () => ({ type: DECREMENT });
 export const add = (amount) => ( {type: ADD, payload: {amount: amount}});
+export const minus = (amount) => ({type: MINUS, payload: {amount: amount}})
 export const reset     = () => ({ type: RESET });
 
 // ── Todo actions ───────────────────────────────────────────────

@@ -7,7 +7,8 @@ import {
   TOGGLE_TODO,
   REMOVE_TODO,
   UPDATE_TODO,
-  ADD
+  ADD,
+  MINUS
 } from './actionTypes';
 
 /**
@@ -40,6 +41,9 @@ function counterReducer(state = initialCounterState, action) {
 
     case ADD:
       return state + Number(action.payload.amount);
+    
+    case MINUS:
+      return state - Number(action.payload.amount);
 
     case RESET:
       return 0;
