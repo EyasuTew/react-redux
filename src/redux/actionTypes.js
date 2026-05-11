@@ -12,6 +12,7 @@
 export const INCREMENT   = 'INCREMENT';
 export const DECREMENT   = 'DECREMENT';
 export const ADD = 'ADD';
+export const MINUS = 'MINUS';
 export const RESET       = 'RESET';
 
 export const ADD_TODO    = 'ADD_TODO';
